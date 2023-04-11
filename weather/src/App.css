@@ -21,10 +21,7 @@ flex-direction: column;
   align-items: center;
   width: 60rem;
   margin: auto;
-  background-color: transparent;
-  border: 300px gray;
-  color: white;
-  border-radius: 20px;
+
 }
 input{
   width: 231px;
@@ -36,4 +33,9 @@ input{
 button{
   background-color: transparent;
   border: none;
+}
+.search-input {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 10px;
 }

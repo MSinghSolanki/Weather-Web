@@ -5,13 +5,13 @@ import axios from 'axios';
 import {BsSearch} from "react-icons/bs";
 import {Weather} from "./components/Weather"
 import { Spinner } from './components/Spinner';
-
+import logo1 from "./images/weather1.jpg"
 
 function App() {
 const[loading,setLoading] = useState(false);
 const[city,setCity] = useState("");
 const [weather,setWeather]= useState({});
-const url = (`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=360e96144e8eb0fca116c4be6816e37e`)
+const url = (`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=360e96144e8eb0fca116c4be6816e37e`)
 const FetchWeather = (event)=>{
   event.preventDefault()
 setLoading(true)
@@ -29,9 +29,9 @@ else{
 
   return (
     <div>
-      
-     <img className='wbg' src= "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1075&q=80"/> 
-    
+      <div>
+     <img className='wbg' src={logo1} /> 
+     </div>
 <div className='search'>
   <form onSubmit={FetchWeather} className='search1'>
 <div>
