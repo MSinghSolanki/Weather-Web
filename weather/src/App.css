@@ -1,0 +1,39 @@
+.wbg{
+  width: 100%;
+  height: 100%;
+}
+
+img.wbg{
+ filter: brightness(70%);
+}
+
+.search{
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+flex-direction: column;
+}
+.search1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  margin: auto;
+  background-color: transparent;
+  border: 300px gray;
+  color: white;
+  border-radius: 20px;
+}
+input{
+  width: 231px;
+    border: none;
+    background: transparent;
+    font-size: 23px;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+}
