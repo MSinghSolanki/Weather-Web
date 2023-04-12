@@ -7,8 +7,24 @@ import {Weather} from "./components/Weather"
 import { Spinner } from './components/Spinner';
 import logo1 from "./videos/bg.mp4"
 import logo2 from "./videos/Clouds.mp4"
+import logo3 from "./videos/Clear.mp4"
+import logo4 from "./videos/rain.mp4"
+import logo5 from "./videos/thunder.mp4"
+import logo6 from "./videos/Snow.mp4"
+import logo7 from "./videos/Smoke.mp4"
+import logo8 from "./videos/Drizzle.mp4"
 
 function App() {
+
+  const videoSources = {
+    Thunderstorm: logo5,
+    Drizzle: logo8,
+    Rain: logo4,
+    Snow: logo6,
+    Clear: logo3,
+    Clouds: logo2,
+    Smoke:logo7,
+  };
 const[loading,setLoading] = useState(false);
 const[city,setCity] = useState("");
 const [weather,setWeather]= useState({});
@@ -33,14 +49,15 @@ else{
   return (
     <div>
       <div>
-    
-      <video className='wbg' src={logo1} autoPlay muted loop>
-      {weather.main && weather.weather[0].main === "Clouds" ? (
-    <video className='wbg' src={logo2} autoPlay muted loop />
-  ) : null}
-</video>
-    
-     </div>
+      {weather.main && (
+            <video
+              src={videoSources[weather.weather[0].main]}
+              autoPlay
+              muted
+              loop
+            />
+          )}
+        </div>
 <div className='search'>
   <form onSubmit={FetchWeather} className='search1'>
 <div>
