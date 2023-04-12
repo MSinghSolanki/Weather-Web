@@ -5,7 +5,8 @@ import axios from 'axios';
 import {BsSearch} from "react-icons/bs";
 import {Weather} from "./components/Weather"
 import { Spinner } from './components/Spinner';
-import logo1 from "./images/weather1.jpg"
+import logo1 from "./videos/bg.mp4"
+import logo2 from "./videos/Clouds.mp4"
 
 function App() {
 const[loading,setLoading] = useState(false);
@@ -17,9 +18,11 @@ const FetchWeather = (event)=>{
 setLoading(true)
 axios.get(url).then((res)=>{
   setWeather(res.data)
+ 
   })
-  setCity('')
   setLoading(false)
+  setCity('')
+ 
 }
 if(loading){
 return <Spinner/>
@@ -30,7 +33,13 @@ else{
   return (
     <div>
       <div>
-     <img className='wbg' src={logo1} /> 
+    
+      <video className='wbg' src={logo1} autoPlay muted loop>
+      {weather.main && weather.weather[0].main === "Clouds" ? (
+    <video className='wbg' src={logo2} autoPlay muted loop />
+  ) : null}
+</video>
+    
      </div>
 <div className='search'>
   <form onSubmit={FetchWeather} className='search1'>

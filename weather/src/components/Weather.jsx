@@ -4,15 +4,16 @@ import "./Weather.css"
 export const Weather = ({data})=>{
 
     return(
-        <div className="weatherdetails">
+       <div className="weatherdetails">
 <div className="icons">
     <div>
         <img className="weat" src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}/>
+    
     <p>{data.weather[0].main}</p>
     </div>
     <p className="temp">{data.main.temp.toFixed(0)}°C</p>
 </div>
- 
+
 
 <div className="weatherdetails1">
     <p>Weather in {data.name}</p>
@@ -29,6 +30,7 @@ export const Weather = ({data})=>{
         <p>Winds</p>
     </div>
 </div>
+
         </div>
     )
 }
