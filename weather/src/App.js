@@ -61,7 +61,9 @@ else{
 <div className='search'>
   <form onSubmit={FetchWeather} className='search1'>
 <div>
+  <div>
     <input onChange={(e)=>setCity(e.target.value)} type='text' placeholder='Search city'/>
+    </div>
     </div>
     <button onClick={FetchWeather}><BsSearch size={20}/></button>
   </form>
