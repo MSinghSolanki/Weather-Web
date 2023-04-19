@@ -28,15 +28,21 @@
     margin: 20px;
     top: 0px;
     color: white;
-  }
+    display: flex;
+    padding-left: 400px;
+    margin: 300px;
+}
+  
   
 
   .icons {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    position: absolute;
+    right: 0px;
+    left: 0px;
+}
+  
   
   .weat {
     width: 100px;
@@ -49,6 +55,8 @@
   }
   
   .weatherdetails1 {
+    position: relative;
+    right: -218px;
     
     display: flex;
     flex-direction: column;
