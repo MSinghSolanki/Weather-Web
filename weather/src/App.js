@@ -4,7 +4,7 @@ import axios from 'axios';
 import { BsSearch } from 'react-icons/bs';
 import { Weather } from './components/Weather';
 import { Spinner } from './components/Spinner';
-import logo1 from './videos/bg.mp4';
+import logo1 from './images/f2.jpg';
 import logo2 from './videos/Clouds.mp4';
 import logo3 from './videos/Clear.mp4';
 import logo4 from './videos/rain.mp4';
@@ -31,6 +31,9 @@ function App() {
 
   const fetchWeather = (event) => {
     event.preventDefault();
+    if (city.trim() === '') {
+      return; // Do not proceed if the search input is empty or contains only whitespace
+    }
     setLoading(true);
     axios.get(url).then((res) => {
       setWeather(res.data);
@@ -44,9 +47,9 @@ function App() {
   } else {
     return (
       <div>
-        <div>
+        <div className='wbg'>
           {Object.keys(weather).length === 0 && weather.constructor === Object ? (
-            <video src={logo1} autoPlay muted loop />
+            <img src={logo1} />
           ) : (
             <video src={videoSources[weather.weather[0].main]} autoPlay muted loop />
           )}
@@ -59,7 +62,7 @@ function App() {
               </div>
             </div>
             <button onClick={fetchWeather}>
-              <BsSearch size={20} />
+              <BsSearch size={20}/>
             </button>
           </form>
         </div>
