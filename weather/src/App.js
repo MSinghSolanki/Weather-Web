@@ -55,14 +55,13 @@ else{
             <video src={videoSources[weather.weather[0].main]} autoPlay muted loop />
           )}
         </div>
+<div className='search1'>
+  <form onSubmit={FetchWeather} >
 <div className='search'>
-  <form onSubmit={FetchWeather} className='search1'>
-<div>
-  <div>
-    <input onChange={(e)=>setCity(e.target.value)} type='text' placeholder='Search city'/>
-    </div>
-    </div>
+    <input onChange={(e)=>setCity(e.target.value)} id='search2' type='text' placeholder='Search city'/>
     <button onClick={FetchWeather}><BsSearch size={20}/></button>
+    </div>
+    
   </form>
 </div>
 
