@@ -1,6 +1,14 @@
+
 .weatherdetails {
   position: absolute;
-  text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ max-width: 500px;
+ max-height: 90vh;
+ margin: auto;
+ padding: 24px;
+ color: gray;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -8,20 +16,26 @@
 }
 
 .icons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 12px;
+}
+
+.wea{
   display: flex;
   flex-direction: column;
-  position: absolute;
-  right: 0;
-  left: 0;
+  align-items: center;
 }
 
 .weat {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 .temp {
-  font-size: 40px;
+  font-size: 200px;
   font-weight: bold;
 }
 
@@ -62,36 +76,23 @@
   font-weight: normal;
 }
 
+
 /* Media Queries */
 
-@media screen and (min-width: 768px) {
-  .weatherdetails1:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-  }
-  
-  .weatherdetails {
-    margin: 10px;
-  }
-
-  .icons {
-    position: static;
-    flex-direction: row;
-  }
-
-  .weatherdetails1 {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
 
 @media screen and (min-width: 375px) {
-  .weatherdetails1:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-  }
+
+
   .weatherdetails {
-    margin: 15px;
+    max-width: 700px;
+    height: 700px;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .temp {
@@ -116,7 +117,30 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 376px) and (max-width: 768px) {
+  .weatherdetails1:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .weatherdetails {
+    margin: 10px;
+  }
+
+  .icons {
+    position: static;
+    flex-direction: row;
+  }
+
+  .weatherdetails1 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
   .weatherdetails1:hover {
     background-color: rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);

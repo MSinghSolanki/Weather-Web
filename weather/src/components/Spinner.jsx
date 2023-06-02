@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/Loading_icon.gif"
+import logo from "../images/load.gif"
 
 
 export const Spinner = ()=>{
