@@ -5,7 +5,7 @@ import axios from 'axios';
 import {BsSearch} from "react-icons/bs";
 import {Weather} from "./components/Weather"
 import { Spinner } from './components/Spinner';
-import logo1 from "./images/f2.jpg"
+import logo1 from "./images/background.jpg"
 import logo2 from "./videos/Clouds.mp4"
 import logo3 from "./videos/Clear.mp4"
 import logo4 from "./videos/rain.mp4"
@@ -13,6 +13,7 @@ import logo5 from "./videos/thunder.mp4"
 import logo6 from "./videos/Snow.mp4"
 import logo7 from "./videos/Smoke.mp4"
 import logo8 from "./videos/Drizzle.mp4"
+import logo9 from "./videos/Haze.mp4"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
     Clear: logo3,
     Clouds: logo2,
     Smoke:logo7,
+    Haze:logo9,
   };
 const[loading,setLoading] = useState(false);
 const[city,setCity] = useState("");
