@@ -1,13 +1,6 @@
 
 .weatherdetails {
   position: absolute;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- max-width: 500px;
- max-height: 90vh;
- margin: auto;
- padding: 24px;
  color: gray;
   left: 50%;
   top: 50%;
@@ -19,8 +12,8 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  padding-top: 12px;
+  flex-direction: row;
+  padding-top: 20px;
 }
 
 .wea{
@@ -35,12 +28,14 @@
 }
 
 .temp {
-  font-size: 200px;
+  font-size: 70px;
   font-weight: bold;
 }
 
 .weatherdetails1 {
+  font-size: 50px;
   position: relative;
+  width: 600px;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
@@ -58,8 +53,12 @@
 
 .weatherdetails1 p {
   margin: 5px;
-  font-size: 20px;
+  font-size: 70px;
   font-weight: bold;
+}
+
+#p1,#p2,#p3{
+  font-size: 20px;
 }
 
 .weatherdetails1 div {
@@ -68,6 +67,7 @@
   justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 50px;
 }
 
 .weatherdetails1 div p {
@@ -80,59 +80,64 @@
 /* Media Queries */
 
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
 
+  
 
+  .weatherdetails1 p {
+    margin: 5px;
+    font-size: 40px;
+    font-weight: bold;
+  }
   .weatherdetails {
-    max-width: 700px;
-    height: 700px;
-    margin: auto;
-    padding: 0 1rem;
+    padding: 1 rem;
     position: relative;
-    top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   .temp {
-    font-size: 20px;
+    font-size: 30px;
+    transform: rotate(-90deg)
   }
 
-  .weatherdetails p {
-    font-size: 16px;
-  }
-
-  .weatherdetails div p {
-    font-size: 14px;
-  }
   .icons {
-    position: static;
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
+    margin-top: 10px;
   }
 
   .weatherdetails1 {
+    width: 350px;
     margin-left: 0;
     margin-top: 10px;
   }
 }
 
 @media (min-width: 376px) and (max-width: 768px) {
+  .temp{
+    font-size: 30px;
+  }
+  .weat{
+    width: 118px;
+    height: 100%;
+  }
+  .weatherdetails1 p{
+    font-size: 40px;
+  }
   .weatherdetails1:hover {
     background-color: rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
   }
-  
-  .weatherdetails {
-    margin: 10px;
-  }
 
-  .icons {
-    position: static;
-    flex-direction: row;
+  .weatherdetails {
+    margin: -30px 27px 32px -23px;
   }
 
   .weatherdetails1 {
+    width: 500px;
     margin-left: 0;
     margin-top: 10px;
   }
@@ -141,21 +146,25 @@
 
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
+ .temp{
+  font-size: 50px;
+ }
   .weatherdetails1:hover {
     background-color: rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
   }
   .weatherdetails1{
+    width: 600px;
     margin-left: 10px;
     padding: 10px;
 
   }
   .weatherdetails {
-    margin: 10px;
+    margin: 100px 27px 32px -23px;
   }
 
   .icons {
-    position: static;
     flex-direction: row;
   }
 

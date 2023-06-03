@@ -17,15 +17,15 @@ export const Weather = ({data})=>{
 
 <div className="weatherdetails1">
     <p>Weather in {data.name}</p>
-    <div>
+    <div id="p1">
         <p>{data.main.feels_like.toFixed(0)}°C</p>
         <p>Feels like</p>
     </div>
-    <div>
+    <div id="p2">
         <p>{data.main.humidity.toFixed(0)}</p>
         <p>Humidity</p>
     </div>
-    <div>
+    <div id="p3">
         <p>{data.wind.speed.toFixed(0)}MPH</p>
         <p>Winds</p>
     </div>
